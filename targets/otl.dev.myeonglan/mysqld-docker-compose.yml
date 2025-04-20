@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  mysqld-exporter:
+    image: prom/mysqld-exporter
+    container_name: mysqld-exporter
+    restart: unless-stopped
+    ports:
+      - '9104:9104'
+    volumes:
+      - ./exporter.my.cnf:/cfg/.my.cnf:ro
+    command:
+      - '--config.my-cnf=/cfg/.my.cnf'
+      - '--mysqld.address=host.docker.internal:3306'

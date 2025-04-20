@@ -14,7 +14,7 @@ scrape_configs:
     static_configs:
       - targets: ["prod.bap.sparcs.org:9100"]
 
-  - job_name: 'cadvisor:otl.dev'
+  - job_name: 'cadvisor:otl.dev.sparcs.org'
     static_configs:
       - targets: ["otl.dev.sparcs.org:65000"]
 
@@ -30,3 +30,6 @@ scrape_configs:
     static_configs:
       - targets: ["kong.sparcs.net:9104"]
   
+  - job_name: 'mysqld:otl.dev.sparcs.org'
+    static_configs:
+      - targets: ["otl.dev.sparcs.org:9104"]
