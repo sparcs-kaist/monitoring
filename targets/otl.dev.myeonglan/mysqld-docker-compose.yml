@@ -11,4 +11,4 @@ services:
       - ./exporter.my.cnf:/cfg/.my.cnf:ro
     command:
       - '--config.my-cnf=/cfg/.my.cnf'
-      - '--mysqld.address=host.docker.internal:3306'
+      - '--mysqld.address=host.docker.internal:43306'
