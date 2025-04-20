@@ -1,0 +1,32 @@
+global:
+  scrape_interval: 1m
+
+scrape_configs:
+  - job_name: "node:otl.dev.myeonglan"
+    static_configs:
+      - targets: ["otl.dev.sparcs.org:9100"]
+  
+  - job_name: "node:otl.prod.gamja"
+    static_configs:
+      - targets: ["otlplus.kws.sparcs.org:9100"]
+
+  - job_name: "node:otl.prod.bap"
+    static_configs:
+      - targets: ["prod.bap.sparcs.org:9100"]
+
+  - job_name: 'cadvisor:otl.dev'
+    static_configs:
+      - targets: ["otl.dev.sparcs.org:65000"]
+
+  - job_name: 'cadvisor:otl.prod.gamja'
+    static_configs:
+      - targets: ["otlplus.kws.sparcs.org:65000"]
+
+  - job_name: 'cadvisor:otl.prod.bap'
+    static_configs:
+      - targets: ["prod.bap.sparcs.org:65000"]
+  
+  - job_name: 'mysqld:kong.sparcs.net'
+    static_configs:
+      - targets: ["kong.sparcs.net:9104"]
+  
