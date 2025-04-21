@@ -38,4 +38,4 @@ services:
     container_name: nginx-prometheus-exporter
     ports:
       - 9113:9113
-    command: -nginx.scrape-uri http://nginx/metrics
+    command: -nginx.scrape-uri http://localhost/metrics

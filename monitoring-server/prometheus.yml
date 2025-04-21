@@ -33,3 +33,7 @@ scrape_configs:
   - job_name: 'mysqld:otl.dev.sparcs.org'
     static_configs:
       - targets: ["otl.dev.sparcs.org:9104"]
+  
+  - job_name: 'nginx:otl.prod.gamja'
+    static_configs:
+      - targets: ["otlplus.kws.sparcs.org:9104"]
