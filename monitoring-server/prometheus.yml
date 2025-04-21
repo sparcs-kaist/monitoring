@@ -38,9 +38,9 @@ scrape_configs:
     static_configs:
       - targets: ["otlplus.kws.sparcs.org:9113"]
 
-  - job_name: 'nginx:otl.prod.gamja'
+  - job_name: 'nginx:otl.prod.bap'
     static_configs:
-      - targets: ["otlplus.kws.sparcs.org:9113"]
+      - targets: ["prod.bap.sparcs.org:9113"]
   
   - job_name: 'nginx:otl.dev.myeonglan'
     static_configs:
