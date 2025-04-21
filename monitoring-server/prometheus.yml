@@ -45,3 +45,30 @@ scrape_configs:
   - job_name: 'nginx:otl.dev.myeonglan'
     static_configs:
       - targets: ["otl.dev.sparcs.org:9113"]
+  
+  - job_name: 'nodejs:otl.prod.gamja'
+    scheme: https
+    metrics_path: '/swagger-stats/metrics'
+    static_configs:
+      - targets: ["api.otl.gamja.sparcs.org"]
+      - basic_auth:
+          username: username
+          password: password
+
+  - job_name: 'nodejs:otl.prod.bap'
+    scheme: https
+    metrics_path: '/swagger-stats/metrics'
+    static_configs:
+      - targets: ["api.otl.bap.sparcs.org"]
+      - basic_auth:
+          username: username
+          password: password
+  
+  - job_name: 'nodejs:otl.dev.myeonglan'
+    scheme: https
+    metrics_path: '/swagger-stats/metrics'
+    static_configs:
+      - targets: ["api.otl.dev.sparcs.org"]
+      - basic_auth:
+          username: username
+          password: password
