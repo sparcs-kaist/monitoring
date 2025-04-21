@@ -36,6 +36,8 @@ services:
   nginx-prometheus-exporter:
     image: nginx/nginx-prometheus-exporter:latest
     container_name: nginx-prometheus-exporter
+    extra_hosts:
+        - host.docker.internal:host-gateway
     ports:
       - 9113:9113
-    command: -nginx.scrape-uri http://localhost/metrics
+    command: -nginx.scrape-uri http://host.docker.internal/metrics
