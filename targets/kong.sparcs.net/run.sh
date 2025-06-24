@@ -3,10 +3,10 @@ sudo tee /etc/systemd/system/mysqld-exporter.service <<'EOF'
 [Unit]
 Description=Prometheus MySQL Exporter
 After=network.target
-User=wheel
-Group=wheel
 
 [Service]
+User=wheel
+Group=wheel
 Type=simple
 Restart=always
 ExecStart=/opt/mysqld_exporter/mysqld_exporter \
