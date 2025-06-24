@@ -13,6 +13,9 @@ ExecStart=/opt/mysqld_exporter/mysqld_exporter \
     --config.my-cnf=/etc/mysqld_exporter.my.cnf \
     --mysqld.address=127.0.0.1:3006
 
+[Install]
+WantedBy=multi-user.target
+
 EOF
 
 sudo systemctl daemon-reload
