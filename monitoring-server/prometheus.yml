@@ -72,3 +72,7 @@ scrape_configs:
           password: password
     static_configs:
       - targets: ["api.otl.dev.sparcs.org"]
+  
+  - job_name: "redis:otl.dev.myeonglan"
+    static_configs:
+      - targets: ["otl.dev.sparcs.org:9121"]
