@@ -59,8 +59,8 @@ scrape_configs:
     scheme: https
     metrics_path: '/swagger-stats/metrics'
     basic_auth:
-          username: username
-          password: password
+          username: ${swaggerstats_otl_username}
+          password: ${swaggerstats_otl_password}
     static_configs:
       - targets: ["api.otl.bap.sparcs.org"]
   
@@ -68,8 +68,8 @@ scrape_configs:
     scheme: https
     metrics_path: '/swagger-stats/metrics'
     basic_auth:
-          username: username
-          password: password
+          username: ${swaggerstats_otl_username}
+          password: ${swaggerstats_otl_password}
     static_configs:
       - targets: ["api.otl.dev.sparcs.org"]
   
