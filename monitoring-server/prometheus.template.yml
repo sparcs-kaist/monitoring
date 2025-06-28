@@ -73,6 +73,14 @@ scrape_configs:
     static_configs:
       - targets: ["api.otl.dev.sparcs.org"]
   
+  - job_name: "redis:otl.prod.gamja"
+    static_configs:
+      - targets: ["otlplus.kws.sparcs.org:9121"]
+
+  - job_name: "redis:otl.prod.bap"
+    static_configs:
+      - targets: ["prod.bap.sparcs.org:9121"]
+
   - job_name: "redis:otl.dev.myeonglan"
     static_configs:
       - targets: ["otl.dev.sparcs.org:9121"]
