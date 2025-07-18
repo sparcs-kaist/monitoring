@@ -46,32 +46,23 @@ scrape_configs:
     static_configs:
       - targets: ["otl.dev.sparcs.org:9113"]
   
-  - job_name: 'nodejs:otl.prod.gamja'
+  - job_name: 'pm2:otl.prod.gamja'
     scheme: https
-    metrics_path: '/swagger-stats/metrics'
-    basic_auth:
-          username: ${swaggerstats_otl_username}
-          password: ${swaggerstats_otl_password}
+    metrics_path: '/metrics'
     static_configs:
-      - targets: ["api.otl.gamja.sparcs.org"]
+      - targets: ["api.otl.gamja.sparcs.org:59209"]
 
-  - job_name: 'nodejs:otl.prod.bap'
+  - job_name: 'pm2:otl.prod.bap'
     scheme: https
-    metrics_path: '/swagger-stats/metrics'
-    basic_auth:
-          username: ${swaggerstats_otl_username}
-          password: ${swaggerstats_otl_password}
+    metrics_path: '/metrics'
     static_configs:
-      - targets: ["api.otl.bap.sparcs.org"]
+      - targets: ["api.otl.bap.sparcs.org:59209"]
   
-  - job_name: 'nodejs:otl.dev.myeonglan'
+  - job_name: 'pm2:otl.dev.myeonglan'
     scheme: https
-    metrics_path: '/swagger-stats/metrics'
-    basic_auth:
-          username: username
-          password: password
+    metrics_path: '/metrics'
     static_configs:
-      - targets: ["api.otl.dev.sparcs.org"]
+      - targets: ["api.otl.dev.sparcs.org:49209"]
   
   - job_name: "redis:otl.prod.gamja"
     static_configs:
