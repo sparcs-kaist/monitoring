@@ -1,5 +1,6 @@
 grafana
 targets/kong.sparcs.net/exporter.my.cnf
+targets/channeltalk.sparcs.net/exporter.my.cnf
 targets/otl.prod.gamja/.env
 targets/sparcs.prod.bap/.env
 targets/otl.dev.myeonglan/.env

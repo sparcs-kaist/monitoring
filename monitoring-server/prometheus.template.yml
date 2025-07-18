@@ -29,6 +29,10 @@ scrape_configs:
   - job_name: 'mysqld:kong.sparcs.net'
     static_configs:
       - targets: ["kong.sparcs.net:9104"]
+
+  - job_name: 'mysqld:channeltalk.sparcs.net'
+    static_configs:
+      - targets: ["db-replica.otl.channeltalk.sparcs.net:9104"]
   
   - job_name: 'mysqld:otl.dev.sparcs.org'
     static_configs:
