@@ -79,3 +79,11 @@ scrape_configs:
   - job_name: "redis:otl.dev.myeonglan"
     static_configs:
       - targets: ["otl.dev.sparcs.org:9121"]
+
+  - job_name: "rabbitmq:otl.prod.gamja"
+    static_configs:
+      - targets: ["mq.otl.gamja.sparcs.org:15692"]
+
+  - job_name: "rabbitmq:otl.dev.myeonglan"
+    static_configs:
+      - targets: ["redis-mq.otl.dev.sparcs.org:15692"]
