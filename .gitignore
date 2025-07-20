@@ -6,4 +6,4 @@ targets/sparcs.prod.bap/.env
 targets/otl.dev.myeonglan/.env
 monitoring-server/.env
 targets/mq.otl.dev.myeonglan/.env
-targets/mq.otl.prod.gamja/.env
+targets/mq.otl.prod.bap/.env

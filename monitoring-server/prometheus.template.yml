@@ -80,9 +80,9 @@ scrape_configs:
     static_configs:
       - targets: ["otl.dev.sparcs.org:9121"]
 
-  - job_name: "rabbitmq:otl.prod.gamja"
+  - job_name: "rabbitmq:otl.prod.bap"
     static_configs:
-      - targets: ["mq.otl.gamja.sparcs.org:15692"]
+      - targets: ["mq.otl.bap.sparcs.net:15692"]
 
   - job_name: "rabbitmq:otl.dev.myeonglan"
     static_configs:
