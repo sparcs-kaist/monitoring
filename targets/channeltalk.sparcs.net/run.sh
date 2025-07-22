@@ -11,7 +11,7 @@ Type=simple
 Restart=always
 ExecStart=/opt/mysqld_exporter/mysqld_exporter \
     --config.my-cnf=/etc/mysqld_exporter.my.cnf \
-    --mysqld.address=127.0.0.1:3006
+    --mysqld.address=127.0.0.1:3006 \
     --collect.engine_innodb_status \
     --collect.global_status \
     --collect.global_variables \
@@ -25,7 +25,7 @@ ExecStart=/opt/mysqld_exporter/mysqld_exporter \
     --collect.info_schema.query_response_time \
     --collect.info_schema.replica_host \
     --collect.info_schema.tables \
-    --collect.info_schema.tables.databases=‘*’ \
+    --collect.info_schema.tables.databases='*' \
     --collect.info_schema.tablestats \
     --collect.info_schema.schemastats \
     --collect.info_schema.userstats \
