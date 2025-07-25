@@ -5,10 +5,10 @@ scrape_configs:
   - job_name: "node:otl.dev.myeonglan"
     static_configs:
       - targets: ["otl.dev.sparcs.org:9100"]
-  
-  - job_name: "node:otl.prod.gamja"
+
+  - job_name: "node:otl.prod.channeltalk"
     static_configs:
-      - targets: ["otlplus.kws.sparcs.org:9100"]
+      - targets: ["otlplus.channeltalk.sparcs.org:9100"]
 
   - job_name: "node:otl.prod.bap"
     static_configs:
@@ -26,9 +26,9 @@ scrape_configs:
     static_configs:
       - targets: ["otl.dev.sparcs.org:65000"]
 
-  - job_name: 'cadvisor:otl.prod.gamja'
+  - job_name: 'cadvisor:otl.prod.channeltalk'
     static_configs:
-      - targets: ["otlplus.kws.sparcs.org:65000"]
+      - targets: ["otlplus.channeltalk.sparcs.org:65000"]
 
   - job_name: 'cadvisor:otl.prod.bap'
     static_configs:
@@ -46,9 +46,9 @@ scrape_configs:
     static_configs:
       - targets: ["otl.dev.sparcs.org:9104"]
   
-  - job_name: 'nginx:otl.prod.gamja'
+  - job_name: 'nginx:otl.prod.channeltalk'
     static_configs:
-      - targets: ["otlplus.kws.sparcs.org:9113"]
+      - targets: ["otlplus.channeltalk.sparcs.org:9113"]
 
   - job_name: 'nginx:otl.prod.bap'
     static_configs:
@@ -58,11 +58,11 @@ scrape_configs:
     static_configs:
       - targets: ["otl.dev.sparcs.org:9113"]
   
-  - job_name: 'pm2:otl.prod.gamja'
+  - job_name: 'pm2:otl.prod.channeltalk'
     scheme: https
     metrics_path: '/metrics'
     static_configs:
-      - targets: ["api.otl.gamja.sparcs.org:59209"]
+      - targets: ["api.otl.channeltalk.sparcs.org:59209"]
 
   - job_name: 'pm2:otl.prod.bap'
     scheme: https
@@ -76,9 +76,9 @@ scrape_configs:
     static_configs:
       - targets: ["api.otl.dev.sparcs.org:49209"]
   
-  - job_name: "redis:otl.prod.gamja"
+  - job_name: "redis:otl.prod.channeltalk"
     static_configs:
-      - targets: ["otlplus.kws.sparcs.org:9121"]
+      - targets: ["otlplus.channeltalk.sparcs.org:9121"]
 
   - job_name: "redis:otl.prod.bap"
     static_configs:
