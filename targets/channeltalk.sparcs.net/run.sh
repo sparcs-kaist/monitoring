@@ -48,11 +48,7 @@ ExecStart=/opt/mysqld_exporter/mysqld_exporter \
     --collect.perf_schema.replication_group_member_stats \
     --collect.perf_schema.replication_applier_status_by_worker \
     --collect.slave_status \
-    --collect.slave_hosts \
-    --collect.heartbeat \
-    --collect.heartbeat.database=true \
-    --collect.heartbeat.table=true \
-    --collect.heartbeat.utc
+    --collect.slave_hosts 
 
 [Install]
 WantedBy=multi-user.target
